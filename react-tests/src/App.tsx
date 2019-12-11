@@ -7,12 +7,12 @@ const App: React.FC = () => {
 
   return (
     <main className="App">
+      <h1>Formik Test</h1>
       <section>
         <Formik
         initialValues={{
           email: '',
-          name: '',
-          color: 'red'
+          password: '',
         }}
         onSubmit={(values, actions) => {
           setResult(JSON.stringify(values, null, 2))
@@ -20,13 +20,6 @@ const App: React.FC = () => {
         >
           {() => (
             <Form>
-              <Field as="select" name="color" value="none">
-                <option value="none">Pick a color</option>
-                <option value="red">Red</option>
-                <option value="green">Green</option>
-                <option value="blue">Blue</option>
-              </Field>
-              <br />
               <Field 
                 name="email"
                 required
@@ -34,12 +27,12 @@ const App: React.FC = () => {
               />
               <br />
               <Field
-                name="name"
+                name="password"
                 required
-                placeholder="Name"
+                placeholder="Password"
               />
               <br />
-              <button type="submit">Submit</button>
+              <button type="submit" data-testid="submit">Submit</button>
             </Form>
           )}
         </Formik>
@@ -47,7 +40,7 @@ const App: React.FC = () => {
 
       <section>
         Submitted Values
-        <pre>
+        <pre data-testid="results">
           { result }
         </pre>
       </section>
