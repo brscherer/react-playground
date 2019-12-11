@@ -7,13 +7,26 @@
 
 section {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   max-width: 960px;
   margin: 0 auto;
+  color: #DFDFDF;
+}
+
+button {
+  margin: 32px 0;
+  width: 25%;
+  font-family: sans-serif;
+  font-weight: bold;
+  border: none;
+  background: crimson;
+  color: #dfdfdf;
+  border-radius: 8px;
+  padding: 8px;
 }
 
 input {
-  width: 100%;
+  width: 50%;
   margin: 16px;
   padding: 12px;
   border-radius: 4px;
@@ -23,4 +36,8 @@ pre {
   width: 50%;
   border-radius: 8px;
   background: #DFDFDF;
+  color: #171b1f;
+  text-align: start;
+  padding: 32px;
+  margin: 32px auto;
 }

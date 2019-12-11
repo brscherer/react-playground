@@ -15,7 +15,7 @@ const App: React.FC = () => {
           color: 'red'
         }}
         onSubmit={(values, actions) => {
-          setResult(JSON.stringify(values))
+          setResult(JSON.stringify(values, null, 2))
         }}
         >
           {() => (
@@ -46,8 +46,9 @@ const App: React.FC = () => {
       </section>
 
       <section>
+        Submitted Values
         <pre>
-          { JSON.stringify(result, null, 2) }
+          { result }
         </pre>
       </section>
     </main>
