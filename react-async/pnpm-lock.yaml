@@ -12,11 +12,11 @@ importers:
         specifier: ^4.1.17
         version: 4.1.17(vite@7.2.6(@types/node@24.10.1)(jiti@2.6.1)(lightningcss@1.30.2))
       react:
-        specifier: ^19.2.0
-        version: 19.2.0
+        specifier: experimental
+        version: 0.0.0-experimental-09f05694-20251201
       react-dom:
-        specifier: ^19.2.0
-        version: 19.2.0(react@19.2.0)
+        specifier: experimental
+        version: 0.0.0-experimental-09f05694-20251201(react@0.0.0-experimental-09f05694-20251201)
       tailwindcss:
         specifier: ^4.1.17
         version: 4.1.17
@@ -1111,17 +1111,17 @@ packages:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
 
-  react-dom@19.2.0:
-    resolution: {integrity: sha512-UlbRu4cAiGaIewkPyiRGJk0imDN2T3JjieT6spoL2UeSf5od4n5LB/mQ4ejmxhCFT1tYe8IvaFulzynWovsEFQ==}
+  react-dom@0.0.0-experimental-09f05694-20251201:
+    resolution: {integrity: sha512-mFNrxEdrNE3sJdKtGDre629jV1HHZ2fanbr796s1kFbRchyz0lc/EmWnU0iJFUkYEofh7a+KJcssU1ofVVdMFw==}
     peerDependencies:
-      react: ^19.2.0
+      react: 0.0.0-experimental-09f05694-20251201
 
   react-refresh@0.18.0:
     resolution: {integrity: sha512-QgT5//D3jfjJb6Gsjxv0Slpj23ip+HtOpnNgnb2S5zU3CB26G/IDPGoy4RJB42wzFE46DRsstbW6tKHoKbhAxw==}
     engines: {node: '>=0.10.0'}
 
-  react@19.2.0:
-    resolution: {integrity: sha512-tmbWg6W31tQLeB5cdIBOicJDJRR2KzXsV7uSK9iNfLWQ5bIZfxuPEHp7M8wiHyHnn0DD1i7w3Zmin0FtkrwoCQ==}
+  react@0.0.0-experimental-09f05694-20251201:
+    resolution: {integrity: sha512-I/DhKQjsTDtVY9AYQVQTxQ3MJXozI0qxFRfKr1u9qX4yGGBQKyG1HMZ+hfQEz5modUBjKfb0sLkdAn2ToyYnpw==}
     engines: {node: '>=0.10.0'}
 
   resolve-from@4.0.0:
@@ -1133,8 +1133,8 @@ packages:
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
 
-  scheduler@0.27.0:
-    resolution: {integrity: sha512-eNv+WrVbKu1f3vbYJT/xtiF5syA5HPIMtf9IgY/nKg0sWqzAUEvqY/xm7OcZc/qafLx/iO9FgOmeSAp4v5ti/Q==}
+  scheduler@0.0.0-experimental-09f05694-20251201:
+    resolution: {integrity: sha512-tlQuwKKsYFGdKGDhWKObcNEd1bWkcRW2ZDXeIAyWY7bCpD6XklAiTh9GoqHBlkMPP4DPb4rpUzaHWQzYO0FXgQ==}
 
   semver@6.3.1:
     resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}
@@ -2237,14 +2237,14 @@ snapshots:
 
   punycode@2.3.1: {}
 
-  react-dom@19.2.0(react@19.2.0):
+  react-dom@0.0.0-experimental-09f05694-20251201(react@0.0.0-experimental-09f05694-20251201):
     dependencies:
-      react: 19.2.0
-      scheduler: 0.27.0
+      react: 0.0.0-experimental-09f05694-20251201
+      scheduler: 0.0.0-experimental-09f05694-20251201
 
   react-refresh@0.18.0: {}
 
-  react@19.2.0: {}
+  react@0.0.0-experimental-09f05694-20251201: {}
 
   resolve-from@4.0.0: {}
 
@@ -2276,7 +2276,7 @@ snapshots:
       '@rollup/rollup-win32-x64-msvc': 4.53.3
       fsevents: 2.3.3
 
-  scheduler@0.27.0: {}
+  scheduler@0.0.0-experimental-09f05694-20251201: {}
 
   semver@6.3.1: {}
 

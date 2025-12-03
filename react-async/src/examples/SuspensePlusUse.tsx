@@ -12,7 +12,7 @@ async function fetchImage(id: number): Promise<ImageData> {
   return { id, url: `/images/${id}.jpg`, title: `Image ${id}` };
 }
 
-function StatePlusEffect() {
+function SuspensePlusUse() {
   const [imageId, setImageId] = useState(1);
   const [imageDataPromise, setImageDataPromise] = useState<Promise<ImageData>>(
     () => fetchImage(imageId)
@@ -72,4 +72,4 @@ function ImageSkeleton() {
   );
 }
 
-export default StatePlusEffect;
+export default SuspensePlusUse;

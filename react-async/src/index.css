@@ -68,3 +68,53 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+
+/* Button pulse when updating */
+::view-transition-old(.button-pulse),
+::view-transition-new(.button-pulse) {
+  animation: pulse 500ms ease-in-out;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+}
+
+/* Content fade transitions */
+::view-transition-old(.fade-out) {
+  animation: fadeOut 300ms ease-in;
+}
+
+::view-transition-new(.fade-in) {
+  animation: fadeIn 300ms ease-out;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+}
+
+/* Slide up animation */
+::view-transition-new(.slide-up) {
+  animation: slideUp 400ms ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+}
