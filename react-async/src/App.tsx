@@ -1,8 +1,10 @@
 import StatePlusEffect from "./examples/StatePlusEffect";
+import SuspensePlusUse from "./examples/SuspensePlusUse";
 
 function App() {
   return (
-    <StatePlusEffect />
+    // <StatePlusEffect />
+    <SuspensePlusUse />
   );
 }
 
