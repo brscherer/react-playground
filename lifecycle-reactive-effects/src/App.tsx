@@ -4,6 +4,7 @@ import { EffectSynchronization } from './components/EffectSynchronization'
 import { ReactiveEffects } from './components/ReactiveEffects'
 import { EffectCleanup } from './components/EffectCleanup'
 import { BreakingCycles } from './components/BreakingCycles'
+import { CustomHooks } from './components/CustomHooks'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <ReactiveEffects />
         <EffectCleanup />
         <BreakingCycles />
+        <CustomHooks />
       </div>
     </div>
   )
