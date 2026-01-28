@@ -3,6 +3,7 @@ import { EffectInitialization } from './components/EffectInitialization'
 import { EffectSynchronization } from './components/EffectSynchronization'
 import { ReactiveEffects } from './components/ReactiveEffects'
 import { EffectCleanup } from './components/EffectCleanup'
+import { BreakingCycles } from './components/BreakingCycles'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <EffectSynchronization />
         <ReactiveEffects />
         <EffectCleanup />
+        <BreakingCycles />
       </div>
     </div>
   )
