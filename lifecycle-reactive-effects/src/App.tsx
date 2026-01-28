@@ -2,6 +2,7 @@ import './App.css'
 import { EffectInitialization } from './components/EffectInitialization'
 import { EffectSynchronization } from './components/EffectSynchronization'
 import { ReactiveEffects } from './components/ReactiveEffects'
+import { EffectCleanup } from './components/EffectCleanup'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <EffectInitialization />
         <EffectSynchronization />
         <ReactiveEffects />
+        <EffectCleanup />
       </div>
     </div>
   )
