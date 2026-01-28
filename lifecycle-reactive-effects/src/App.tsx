@@ -1,5 +1,6 @@
 import './App.css'
 import { EffectInitialization } from './components/EffectInitialization'
+import { EffectSynchronization } from './components/EffectSynchronization'
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <p>Proof of Concept demonstrating React effect lifecycle patterns</p>
       <div style={{ display: 'grid', gap: '20px', marginTop: '20px' }}>
         <EffectInitialization />
+        <EffectSynchronization />
       </div>
     </div>
   )
