@@ -1,6 +1,7 @@
 import './App.css'
 import { EffectInitialization } from './components/EffectInitialization'
 import { EffectSynchronization } from './components/EffectSynchronization'
+import { ReactiveEffects } from './components/ReactiveEffects'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <div style={{ display: 'grid', gap: '20px', marginTop: '20px' }}>
         <EffectInitialization />
         <EffectSynchronization />
+        <ReactiveEffects />
       </div>
     </div>
   )
