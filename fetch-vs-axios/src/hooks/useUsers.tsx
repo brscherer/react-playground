@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react"
-import { fetchUsers } from "../api/clients/fetchClient"
 import { axiosUsers } from "../api/clients/axiosClient"
-import type { User } from "../api/types"
+import { fetchUsers } from "../api/clients/fetchClient"
+import type { User, ApiError } from "../api/types"
 
 type Mode = "fetch" | "axios"
 
 export function useUsers(mode: Mode) {
   const [data, setData] = useState<User[]>([])
   const [loading, setLoading] = useState(false)
-  const [error, setError] = useState<string | null>(null)
+  const [error, setError] = useState<ApiError | null>(null)
 
   useEffect(() => {
     setLoading(true)
@@ -18,7 +18,7 @@ export function useUsers(mode: Mode) {
 
     fn()
       .then(setData)
-      .catch((err) => setError(err.message))
+      .catch(setError)
       .finally(() => setLoading(false))
   }, [mode])
 

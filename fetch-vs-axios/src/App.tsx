@@ -13,7 +13,12 @@ function App() {
       <button onClick={() => setMode("axios")}>Axios</button>
 
       {loading && <p>Loading...</p>}
-      {error && <p style={{ color: "red" }}>{error}</p>}
+      {error && (
+        <p style={{ color: "red" }}>
+          [{error.source}] {error.message}
+          {error.status && ` (status ${error.status})`}
+        </p>
+      )}
 
       <ul>
         {data.map((u) => (

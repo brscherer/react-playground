@@ -3,3 +3,9 @@ export interface User {
   name: string
   email: string
 }
+
+export interface ApiError {
+  message: string
+  status?: number
+  source: "fetch" | "axios"
+}

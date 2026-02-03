@@ -1,13 +1,30 @@
-import type { User } from "../types"
+import type { User, ApiError } from "../types"
 
 const BASE_URL = "https://jsonplaceholder.typicode.com"
 
 export async function fetchUsers(): Promise<User[]> {
-  const response = await fetch(`${BASE_URL}/users`)
+  try {
+    const response = await fetch(`${BASE_URL}/users`)
 
-  if (!response.ok) {
-    throw new Error(`Fetch error: ${response.status}`)
+    if (!response.ok) {
+      const error: ApiError = {
+        message: "HTTP error",
+        status: response.status,
+        source: "fetch",
+      }
+      throw error
+    }
+
+    return response.json()
+  } catch (err) {
+    if (err instanceof TypeError) {
+      const error: ApiError = {
+        message: "Network error",
+        source: "fetch",
+      }
+      throw error
+    }
+
+    throw err
   }
-
-  return response.json()
 }
