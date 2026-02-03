@@ -11,15 +11,28 @@ export function useUsers(mode: Mode) {
   const [error, setError] = useState<ApiError | null>(null)
 
   useEffect(() => {
+    const controller = new AbortController()
+
     setLoading(true)
     setError(null)
 
-    const fn = mode === "fetch" ? fetchUsers : axiosUsers
+    const fn =
+      mode === "fetch"
+        ? fetchUsers
+        : axiosUsers
 
-    fn()
+    fn(controller.signal)
       .then(setData)
-      .catch(setError)
+      .catch((err) => {
+        if (err.message !== "Request canceled") {
+          setError(err)
+        }
+      })
       .finally(() => setLoading(false))
+
+    return () => {
+      controller.abort()
+    }
   }, [mode])
 
   return { data, loading, error }
